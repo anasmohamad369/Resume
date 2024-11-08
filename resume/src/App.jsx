@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react';
 import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
+import { Display } from './Display';
+const App = () => {
+  
 
   return (
-    [
+    <div id='tags'>
+        <Display/>
+    </div>
+  );
+};
 
-      <h1> resume app</h1>,
-      <p>let's start</p>
-    ]
-  )
-}
-
-export default App
+export default App;
