@@ -23,7 +23,7 @@ const Side = ({ name ,lname}) => {
      </div> 
     
 
-    <button onClick={handleDownload}>Download PDF</button>
+      <button onClick={handleDownload}>Download PDF</button>
 </div>
     </div>
     
