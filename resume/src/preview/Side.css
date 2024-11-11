@@ -1,9 +1,14 @@
 .main{
-    width: 90vh;
+    width: 40vw;
     height: 100vh;
-    /* background-color: wheat; */
-    /* margin: 10px */
+    /* left: 0px; */
+    right: 0px;
 }
 .namecontent{
-    padding: 10px;
-}
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+  }
+  

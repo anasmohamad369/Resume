@@ -10,8 +10,9 @@ const Side = ({ name ,lname}) => {
     const element = pdfRef.current;
     html2pdf()
       .from(element)
-      .save('my-file.pdf');
+      .save(name);
   };
+  
   return (
     <>
  <div ref={pdfRef} style={{ padding: '20px', background: '#fff' }}>
@@ -21,13 +22,11 @@ const Side = ({ name ,lname}) => {
      <p> {lname}</p>
    
      </div> 
-    
-
 </div>
 
-<button onClick={handleDownload}>Download PDF</button>
+  
     </div>
-    
+    <button onClick={handleDownload}>Download PDF</button>
     </>
   
   );
