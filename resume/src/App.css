@@ -1,3 +1,13 @@
 #tags{
   display: flex;
+  background-color: rgb(68, 140, 202);
+  height: auto;
+  width: 100vw;
+}
+.namecontent{
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
 }
