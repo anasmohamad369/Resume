@@ -1,8 +1,9 @@
 .main{
-    width: 40vw;
+    width: 50vw;
     height: 100vh;
     /* left: 0px; */
     right: 0px;
+ 
 }
 .namecontent{
     display: flex;
@@ -10,5 +11,11 @@
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     justify-content: center;
+    text-align: center;
+  }
+  .personalcontact{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
   
