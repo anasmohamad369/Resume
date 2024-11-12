@@ -25,10 +25,10 @@ export const Display = () => {
   return (
        <>
        <div className="left">
-       <Form name={name} setName={setName}  lname={lname} setLname={setLname}/>
+       <Form name={name} setName={setName}  lname={lname} setLname={setLname} number={number} setNumber={setNumber}  />
        </div> 
     <div className="right">
-    <Side name={name}  lname={lname}/>  
+    <Side name={name}  lname={lname} number={number}/>  
 
     </div>
 
