@@ -1,11 +1,11 @@
 import React from 'react';
 import './Form.css';
 
-export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,setEmail }) => {
+export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,setEmail }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      firstName: Fname,
+      firstName: name,
       lastName: lname,
       number: number,
       email : email
@@ -21,8 +21,8 @@ export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,s
         <label>First Name:</label>
         <input
           type="text"
-          name="FirstName"
-          value={Fname}
+          name="firstName"
+          value={name}
           onChange={(e) => setName(e.target.value)}
         /> 
 
