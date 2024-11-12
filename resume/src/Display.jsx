@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Side from './preview/Side';
 import { Form } from './Resumeedit/Form';
-import { useState } from 'react';
 import './Display.css'
 export const Display = () => {
   const [name, setName] = useState('');
@@ -24,10 +23,10 @@ export const Display = () => {
   return (
        <>
        <div className="left">
-       <Form name={name} setName={setName}  lname={lname} setLname={setLname}/>
+       <Form name={name} setName={setName}  lname={lname} setLname={setLname} number={number} setNumber={setNumber} email={email} setEmail={setEmail}/>
        </div> 
     <div className="right">
-    <Side name={name}  lname={lname}/>  
+    <Side name={name}  lname={lname} number={number} email={email}/>  
 
     </div>
 
