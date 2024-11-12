@@ -25,7 +25,7 @@ export const Display = () => {
   return (
        <>
        <div className="left">
-       <Form name={name} setName={setName}  lname={lname} setLname={setLname} number={number} setNumber={setNumber}  />
+       <Form name={name} setName={setName}  lname={lname} setLname={setLname} number={number} setNumber={setNumber}  email={email} setEmail={setEmail} />
        </div> 
     <div className="right">
     <Side name={name}  lname={lname} number={number} email={email}/>  
