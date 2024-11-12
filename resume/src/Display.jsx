@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Side from './preview/Side';
 import { Form } from './Resumeedit/Form';
-import { useState } from 'react';
+
 import './Display.css'
 export const Display = () => {
   const [name, setName] = useState('');
