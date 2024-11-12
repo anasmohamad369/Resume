@@ -28,7 +28,7 @@ export const Display = () => {
        <Form name={name} setName={setName}  lname={lname} setLname={setLname} number={number} setNumber={setNumber}  />
        </div> 
     <div className="right">
-    <Side name={name}  lname={lname} number={number}/>  
+    <Side name={name}  lname={lname} number={number} email={setEmail}/>  
 
     </div>
 
