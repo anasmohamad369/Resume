@@ -8,7 +8,8 @@ export const Display = () => {
   const [lname, setLname] = useState('');
   const [number,setNumber] = useState('');
   const [email,setEmail] = useState('');
-  // console.log(email);
+  console.log(email);
+
   
   
   useEffect(() => {
