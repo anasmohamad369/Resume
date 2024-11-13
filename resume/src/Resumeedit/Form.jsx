@@ -1,11 +1,11 @@
 import React from 'react';
 import './Form.css';
 
-export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,setEmail }) => {
+export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,setEmail,git,setGit,linked,setLinked }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      firstName: name,
+      firstName: Fname,
       lastName: lname,
       number: number,
       email : email
