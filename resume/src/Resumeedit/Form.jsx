@@ -1,7 +1,7 @@
 import React from 'react';
 import './Form.css';
 
-export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,setEmail,git,setGit,linked,setLinked }) => {
+export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,setEmail,git,setGit,linked,setLinked ,location,setLocation}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -18,7 +18,9 @@ export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,se
   return (
     <>
 
-    <h1 className='personal'> Personal Information</h1>
+    {/* <h1 className='personal'> Personal Information</h1> */}
+    <div className="maincontainer">
+
     <form onSubmit={handleSubmit} className="form-container">
       <div className="input-fields">
         <label>First Name:</label>
@@ -65,7 +67,7 @@ export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,se
           value={git}
           onChange={(e) => setGit(e.target.value)}
         />
-         <label>linked URl:</label>
+         <label>linked-in URl:</label>
           <input
           type="text"
           name="linked"
@@ -75,13 +77,14 @@ export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,se
           <label>LOCATION:</label>
           <input
           type="text"
-          name="linked"
-          value={linked}
-          onChange={(e) => setLinked(e.target.value)}
+          name="location"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
         />
     </div>
 
     </form>
+    </div>
 
     </>
 
