@@ -23,8 +23,9 @@ const Side = ({ name, lname ,number ,email,git,linked}) => {
           <div className="personalcontact">
           <p>{number}</p>
           <a href={`mailto:${email}`}>{email}</a>
-          <p>{}</p>
-          <p>{linked}</p>
+
+          <a href={git}></a>
+          <a href={linked}> {linked} </a>
         </div>
 
         </div>

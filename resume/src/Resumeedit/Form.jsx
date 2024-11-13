@@ -1,11 +1,11 @@
 import React from 'react';
 import './Form.css';
 
-export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,setEmail,git,setGit,linked,setLinked }) => {
+export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,setEmail,git,setGit,linked,setLinked }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      firstName: Fname,
+      firstName: name,
       lastName: lname,
       number: number,
       email : email
@@ -25,7 +25,7 @@ export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,s
         <input
           type="text"
           name="FirstName"
-          value={Fname}
+          value={name}
           onChange={(e) => setName(e.target.value)}
         /> 
 
@@ -66,6 +66,13 @@ export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,s
           onChange={(e) => setGit(e.target.value)}
         />
          <label>linked URl:</label>
+          <input
+          type="text"
+          name="linked"
+          value={linked}
+          onChange={(e) => setLinked(e.target.value)}
+        />
+          <label>LOCATION:</label>
           <input
           type="text"
           name="linked"

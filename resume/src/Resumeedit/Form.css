@@ -57,9 +57,13 @@
     background-color: #10d0d3;
   }
   .span{
-    color:rgba(255, 0, 0, 0.637);
+    color:rgba(255, 0, 0, 0.386);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   .personal{
     font-size: 30px;
+  }
+  .personalcontact a{
+        color: #333;
+        text-decoration: none;
   }
