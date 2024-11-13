@@ -24,7 +24,7 @@ const Side = ({ name, lname ,number ,email,git,linked}) => {
           <p>{number}</p>
           <a href={`mailto:${email}`}>{email}</a>
 
-          <a href={git}></a>
+          <a href={git}>{git}</a>
           <a href={linked}> {linked} </a>
         </div>
 
