@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './Side.css';
 import html2pdf from 'html2pdf.js';
 
-const Side = ({ name, lname ,number ,email,git,linked}) => {
+const Side = ({ name, lname ,number ,email,git,linked,location}) => {
   const pdfRef = useRef();
 
   const handleDownload = () => {
@@ -24,8 +24,9 @@ const Side = ({ name, lname ,number ,email,git,linked}) => {
           <p>{number}</p>
           <a href={`mailto:${email}`}>{email}</a>
 
-          <a href={git}></a>
+          <a href={git}>github</a>
           <a href={linked}> {linked} </a>
+          <p>{location}</p>
         </div>
 
         </div>

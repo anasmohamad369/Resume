@@ -6,12 +6,11 @@
     /* background-color: rgba(0, 0, 0, 0.08); */
 }
 .inrectangle{
-    width: 20vw;
+    width: 10vw;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* background-color: black; */
 }
 .inrectangle img{
         height: 75px;
