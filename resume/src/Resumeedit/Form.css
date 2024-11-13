@@ -9,6 +9,7 @@
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 8px;
+    margin-top: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -58,4 +59,7 @@
   .span{
     color:rgba(255, 0, 0, 0.637);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .personal{
+    font-size: 30px;
   }

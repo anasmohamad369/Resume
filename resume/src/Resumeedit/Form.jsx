@@ -1,11 +1,11 @@
 import React from 'react';
 import './Form.css';
 
-export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,setEmail }) => {
+export const Form = ({ name, setName, lname, setLname,number,setNumber ,email,setEmail ,git,setGit,linked ,setLinked }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      firstName: Fname,
+      firstName: name,
       lastName: lname,
       number: number,
       email : email
@@ -16,13 +16,16 @@ export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,s
   };
 
   return (
+    <>
+
+    <h1 className='personal'> Personal Information</h1>
     <form onSubmit={handleSubmit} className="form-container">
       <div className="input-fields">
         <label>First Name:</label>
         <input
           type="text"
           name="FirstName"
-          value={Fname}
+          value={name}
           onChange={(e) => setName(e.target.value)}
         /> 
 
@@ -51,5 +54,29 @@ export const Form = ({ Fname, setName, lname, setLname,number,setNumber ,email,s
         <button type="submit" className="submit-button">Save</button>
       </div>
     </form>
+    <form onSubmit={handleSubmit} className="form-container"> 
+    <div className="input-fields">
+
+
+    <label>GitHub Url:</label>
+          <input
+          type="text"
+          name="git"
+          value={git}
+          onChange={(e) => setGit(e.target.value)}
+        />
+         <label>linked URl:</label>
+          <input
+          type="text"
+          name="linked"
+          value={linked}
+          onChange={(e) => setLinked(e.target.value)}
+        />
+    </div>
+
+    </form>
+
+    </>
+
   );
 };

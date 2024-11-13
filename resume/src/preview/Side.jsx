@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './Side.css';
 import html2pdf from 'html2pdf.js';
 
-const Side = ({ name, lname ,number ,email}) => {
+const Side = ({ name, lname ,number ,email,git,linked}) => {
   const pdfRef = useRef();
 
   const handleDownload = () => {
@@ -21,9 +21,12 @@ const Side = ({ name, lname ,number ,email}) => {
            
           </div>
           <div className="personalcontact">
-            <p>{number}</p>
-            <a> {email}</a>
-          </div>
+          <p>{number}</p>
+          <a href={`mailto:${email}`}>{email}</a>
+          <p>{}</p>
+          <p>{linked}</p>
+        </div>
+
         </div>
       </div>
       <button onClick={handleDownload}>Download PDF</button>
