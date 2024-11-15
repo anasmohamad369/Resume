@@ -8,7 +8,7 @@ export const Formone = () => {
         <input
           type="text"
           name="FirstName"
-          value={name}
+    
           onChange={(e) => setName(e.target.value)}
         /> 
         </form>

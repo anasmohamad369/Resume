@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Side from './preview/Side';
 import { Form } from './Resumeedit/Form';
-import './Display.css';
+import { Formone } from './Resumeedit/Formone';
 import VerticalRectangle from './Leftblock';
+import './Display.css';
 
 export const Display = () => {
   const [name, setName] = useState('');
@@ -12,7 +14,6 @@ export const Display = () => {
   const [git, setGit] = useState('');
   const [linked, setLinked] = useState('');
   const [location, setLocation] = useState('');
-  
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem('userData'));
@@ -25,34 +26,36 @@ export const Display = () => {
   }, []);
 
   return (
-    <>
     <div className="maindisplay">
-
-      
       <div className="left">
-      <VerticalRectangle />
-        <Form
-          name={name}
-          setName={setName}
-          lname={lname}
-          setLname={setLname}
-          number={number}
-          setNumber={setNumber}
-          email={email}
-          setEmail={setEmail}
-          git={git}
-          setGit={setGit}
-          linked={linked}
-          setLinked={setLinked}
-          location={location}
-          setLocation={setLocation}
-        />
+        <VerticalRectangle />
+        <Routes>
+          <Route path="/" element={
+            <Form
+              name={name}
+              setName={setName}
+              lname={lname}
+              setLname={setLname}
+              number={number}
+              setNumber={setNumber}
+              email={email}
+              setEmail={setEmail}
+              git={git}
+              setGit={setGit}
+              linked={linked}
+              setLinked={setLinked}
+              location={location}
+              setLocation={setLocation}
+            />
+          } />
+          <Route path="/formone" element={
+            <Formone/>
+          } />
+        </Routes>
       </div>
       <div className="right">
         <Side name={name} lname={lname} number={number} email={email} git={git} linked={linked} location={location} />
       </div>
-      </div>
-
-    </>
+    </div>
   );
 };
