@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './leftblock.css';
 import first from '../public/images/content.png';
 
@@ -6,17 +7,17 @@ export default function VerticalRectangle() {
   return (
     <div className="inrectangle">
       <div className="rectangle">
-        <a href="./Form.jsx"> 
+        <Link to="/">
           <button className="image-button">
             <img src={first} alt="Button 1" />
           </button>
-        </a>
+        </Link>
 
-        <a href="./Formone.jsx">
+        <Link to="/formone">
           <button className="image-button">
             <img src="/images/xyz.png" alt="Button 2" />
           </button>
-        </a>
+        </Link>
 
         <button className="image-button">
           <img src="/images/xyz.png" alt="Button 3" />
