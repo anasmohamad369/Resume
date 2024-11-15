@@ -24,8 +24,10 @@ const Side = ({ name, lname ,number ,email,git,linked,location}) => {
           <p>{number}</p>
           <a href={`mailto:${email}`}>{email}</a>
 
-          <a href={git}></a>
-          <a href={linked}> {linked} </a>
+          <a href={"https://github.com/ShashankRala"}>
+          <img src="/public/images/GitHub-Symbol.png" alt="GitHub" style={{ width: '23px', height: '20px', marginRight: '3px' }} />
+          {git}</a>
+          <a href={"inputvalue"}> {linked} </a>
           <p>{location}</p>
         </div>
 

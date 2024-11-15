@@ -67,3 +67,45 @@
         color: #333;
         text-decoration: none;
   }
+
+
+  /* App.css */
+
+.container {
+  padding: 20px;
+}
+
+.tab {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  /* border: ; */
+  background-color: #d0e7eb;
+  width: 360px;
+  border-radius: 8px;
+}
+
+.inputtab {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-button {
+  background-color: #10d0d3;
+  color: white;
+  border-radius: 4px;
+}
+
+.cancel-button {
+  background-color: #10d0d3;
+  color: white;
+  border-radius: 4px;
+}
