@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Side from './preview/Side';
 import { Form } from './Resumeedit/Form';
-import { Formone } from './Resumeedit/Formone';
 import VerticalRectangle from './Leftblock';
 import './Display.css';
 
@@ -12,8 +11,8 @@ export const Display = () => {
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
   const [git, setGit] = useState('');
-  const [linked, setLinked] = useState('');
   const [location, setLocation] = useState('');
+  const [inputValue, setInputValue] = useState('');
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem('userData'));
@@ -22,6 +21,9 @@ export const Display = () => {
       setLname(savedData.lastName || '');
       setNumber(savedData.number || '');
       setEmail(savedData.email || '');
+      setGit(savedData.gitUsername || '');
+      setLocation(savedData.location || '');
+      setInputValue(savedData.githubLink || '');
     }
   }, []);
 
@@ -42,19 +44,16 @@ export const Display = () => {
               setEmail={setEmail}
               git={git}
               setGit={setGit}
-              linked={linked}
-              setLinked={setLinked}
+              inputValue={inputValue}
+              setInputValue={setInputValue}
               location={location}
               setLocation={setLocation}
             />
           } />
-          <Route path="/formone" element={
-            <Formone/>
-          } />
         </Routes>
       </div>
       <div className="right">
-        <Side name={name} lname={lname} number={number} email={email} git={git} linked={linked} location={location} />
+        <Side name={name} lname={lname} number={number} email={email} git={git} inputValue={inputValue} location={location} />
       </div>
     </div>
   );
