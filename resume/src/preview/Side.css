@@ -16,4 +16,10 @@
     justify-content: center;
     gap: 20px;
   }
+  .github{
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    align-items: center;
+  }
   

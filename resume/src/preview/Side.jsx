@@ -23,12 +23,15 @@ const Side = ({ name, lname ,number ,email,git,linked,location}) => {
           <div className="personalcontact">
           <p>{number}</p>
           <a href={`mailto:${email}`}>{email}</a>
-
-          <a href={"https://github.com/ShashankRala"}>
-          <img src="/public/images/GitHub-Symbol.png" alt="GitHub" style={{ width: '23px', height: '20px', marginRight: '3px' }} />
-          {git}</a>
-          <a href={"inputvalue"}> {linked} </a>
           <p>{location}</p>
+         <div className="github">
+         <img src="/public/images/GitHub-Symbol.png" alt="GitHub" style={{ width: "auto", height: '20px' }} />
+         <a href={"https://github.com/ShashankRala"}>
+          
+          {git}</a>
+         </div> 
+                   <a href={"inputvalue"}> {linked} </a>
+         
         </div>
 
         </div>

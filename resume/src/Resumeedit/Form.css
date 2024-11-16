@@ -71,9 +71,6 @@
 
   /* App.css */
 
-.container {
-  padding: 20px;
-}
 
 .tab {
   position: absolute;
@@ -108,4 +105,11 @@
   background-color: #10d0d3;
   color: white;
   border-radius: 4px;
+}
+.container button{
+       background-color: transparent;
+       border: 0px;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-size: larger;
+       cursor: pointer;
 }
