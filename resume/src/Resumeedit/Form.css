@@ -113,3 +113,25 @@
        font-size: larger;
        cursor: pointer;
 }
+.github-link-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.github-link-container input {
+  flex: 1;
+  padding-right: 30px; 
+}
+
+.github-icon {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.subform{
+  display: flex;
+  gap: 20px;
+}

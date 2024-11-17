@@ -13,6 +13,7 @@ export const Display = () => {
   const [git, setGit] = useState('');
   const [location, setLocation] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [isGitFocused, setIsGitFocused] = useState(false);
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem('userData'));
@@ -32,28 +33,41 @@ export const Display = () => {
       <div className="left">
         <VerticalRectangle />
         <Routes>
-          <Route path="/" element={
-            <Form
-              name={name}
-              setName={setName}
-              lname={lname}
-              setLname={setLname}
-              number={number}
-              setNumber={setNumber}
-              email={email}
-              setEmail={setEmail}
-              git={git}
-              setGit={setGit}
-              inputValue={inputValue}
-              setInputValue={setInputValue}
-              location={location}
-              setLocation={setLocation}
-            />
-          } />
+          <Route
+            path="/"
+            element={
+              <Form
+                name={name}
+                setName={setName}
+                lname={lname}
+                setLname={setLname}
+                number={number}
+                setNumber={setNumber}
+                email={email}
+                setEmail={setEmail}
+                git={git}
+                setGit={setGit}
+                inputValue={inputValue}
+                setInputValue={setInputValue}
+                location={location}
+                setLocation={setLocation}
+                setIsGitFocused={setIsGitFocused}
+              />
+            }
+          />
         </Routes>
       </div>
       <div className="right">
-        <Side name={name} lname={lname} number={number} email={email} git={git} inputValue={inputValue} location={location} />
+        <Side
+          name={name}
+          lname={lname}
+          number={number}
+          email={email}
+          git={git}
+          inputValue={inputValue}
+          location={location}
+          isGitFocused={isGitFocused}
+        />
       </div>
     </div>
   );
