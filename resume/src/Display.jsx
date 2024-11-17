@@ -10,11 +10,14 @@ export const Display = () => {
   const [lname, setLname] = useState('');
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
-  const [git, setGit] = useState('');
+  // const [git, setGit] = useState('');
   const [location, setLocation] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [inputValueTwo, setInputValueTwo] = useState('');
+  
   const [isGitFocused, setIsGitFocused] = useState(false);
-
+  const [isLinkedFocused,setIsLinkedFocused] = useState(false);
+  
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem('userData'));
     if (savedData) {
@@ -22,9 +25,10 @@ export const Display = () => {
       setLname(savedData.lastName || '');
       setNumber(savedData.number || '');
       setEmail(savedData.email || '');
-      setGit(savedData.gitUsername || '');
+      // setGit(savedData.gitUsername || '');
       setLocation(savedData.location || '');
       setInputValue(savedData.githubLink || '');
+      setInputValueTwo(savedData.linkedIn|| '');
     }
   }, []);
 
@@ -45,13 +49,14 @@ export const Display = () => {
                 setNumber={setNumber}
                 email={email}
                 setEmail={setEmail}
-                git={git}
-                setGit={setGit}
+                location={location}
                 inputValue={inputValue}
                 setInputValue={setInputValue}
-                location={location}
+                inputValueTwo={inputValueTwo}
+                setInputValueTwo={setInputValueTwo}
                 setLocation={setLocation}
                 setIsGitFocused={setIsGitFocused}
+                setIsLinkedFocused={setIsLinkedFocused}
               />
             }
           />
@@ -63,10 +68,11 @@ export const Display = () => {
           lname={lname}
           number={number}
           email={email}
-          git={git}
           inputValue={inputValue}
+          inputValueTwo={inputValueTwo}
           location={location}
           isGitFocused={isGitFocused}
+          isLinkedFocused={isLinkedFocused}
         />
       </div>
     </div>

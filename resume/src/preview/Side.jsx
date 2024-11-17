@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './Side.css';
 import html2pdf from 'html2pdf.js';
 
-const Side = ({ name, lname, number, email, git, location, inputValue, isGitFocused }) => {
+const Side = ({ name, lname, number, email, location, inputValue, inputValueTwo, isGitFocused ,isLinkedFocused}) => {
   const pdfRef = useRef();
 
   const handleDownload = () => {
@@ -24,12 +24,12 @@ const Side = ({ name, lname, number, email, git, location, inputValue, isGitFocu
           <div className="personalcontact">
             <p>{number}</p>
             <a href={`mailto:${email}`}>{email}</a>
-
+            <p>{location}</p>
             <div className="github-preview">
               {(isGitFocused || inputValue) && (
                 <div style={{display:"flex"}}>
                   <img
-                    src="/public/images/GitHub-Symbol.png"
+                    src="/images/GitHub-Symbol.png"
                     alt="GitHub"
                     style={{ width: 'auto', height: '20px', marginRight: '5px' }}
                   />
@@ -46,8 +46,29 @@ const Side = ({ name, lname, number, email, git, location, inputValue, isGitFocu
                 </div>
               )}
             </div>
+            <div className="github-preview">
+              {(isLinkedFocused || inputValueTwo) && (
+                <div style={{display:"flex"}}>
+                  <img
+                    src="/images/Linkedi.png"
+                    alt="GitHub"
+                    style={{ width: 'auto', height: '20px', marginRight: '5px' }}
+                  />
+                  {inputValue && (
+                    <a
+                      href={inputValueTwo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="github-link"
+                    >
+                      Linked
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
 
-            <p>{location}</p>
+           
           </div>
         </div>
       </div>

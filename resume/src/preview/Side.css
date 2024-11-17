@@ -2,6 +2,7 @@
     /* width: 50vw; */
     height: 100vh;
     right: 0px;
+    /* background-color: rgb(0, 115, 216); */
 }
 .namecontent{
     display: flex;
@@ -14,7 +15,8 @@
   .personalcontact{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    font-size: 12px;
   }
   .github{
     display: flex;
